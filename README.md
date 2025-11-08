@@ -1,6 +1,9 @@
 Welcome to your new TanStack app! 
 
 # Getting Started
+<img width="1477" height="4983" alt="localhost_3000_" src="https://github.com/user-attachments/assets/4e586f34-7130-430e-a425-4e3f1e244f01" />
+
+
 
 To run this application:
 
