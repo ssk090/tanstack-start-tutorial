@@ -4,6 +4,7 @@ import React from "react";
 import { Logo } from "@/components/logo";
 import { Button } from "@/components/ui/button";
 import { cn } from "@/lib/utils";
+import { ThemeSwitcher } from "./kibo-ui/theme-switcher";
 
 const menuItems = [
 	{ name: "Features", href: "#link" },
@@ -39,7 +40,7 @@ export const HeroHeader = () => {
 					<div className="relative flex flex-wrap items-center justify-between gap-6 py-3 lg:gap-0 lg:py-4">
 						<div className="flex w-full justify-between lg:w-auto">
 							<Link
-								href="/"
+								to="/"
 								aria-label="home"
 								className="flex items-center space-x-2"
 							>
@@ -61,7 +62,7 @@ export const HeroHeader = () => {
 								{menuItems.map((item, index) => (
 									<li key={index}>
 										<Link
-											href={item.href}
+											to={item.href}
 											className="text-muted-foreground hover:text-accent-foreground block duration-150"
 										>
 											<span>{item.name}</span>
@@ -77,7 +78,7 @@ export const HeroHeader = () => {
 									{menuItems.map((item, index) => (
 										<li key={index}>
 											<Link
-												href={item.href}
+												to={item.href}
 												className="text-muted-foreground hover:text-accent-foreground block duration-150"
 											>
 												<span>{item.name}</span>
@@ -87,13 +88,14 @@ export const HeroHeader = () => {
 								</ul>
 							</div>
 							<div className="flex w-full flex-col space-y-3 sm:flex-row sm:gap-3 sm:space-y-0 md:w-fit">
+								<ThemeSwitcher />
 								<Button
 									asChild
 									variant="outline"
 									size="sm"
 									className={cn(isScrolled && "lg:hidden")}
 								>
-									<Link href="#">
+									<Link to="#">
 										<span>Login</span>
 									</Link>
 								</Button>
@@ -102,7 +104,7 @@ export const HeroHeader = () => {
 									size="sm"
 									className={cn(isScrolled && "lg:hidden")}
 								>
-									<Link href="#">
+									<Link to="#">
 										<span>Sign Up</span>
 									</Link>
 								</Button>
@@ -111,7 +113,7 @@ export const HeroHeader = () => {
 									size="sm"
 									className={cn(isScrolled ? "lg:inline-flex" : "hidden")}
 								>
-									<Link href="#">
+									<Link to="#">
 										<span>Get Started</span>
 									</Link>
 								</Button>
